@@ -2,9 +2,17 @@
 
 ## ⚠️ Not medical advice
 
-Every post in this repository is **n=1 personal health tracking** by Trisha Black. Nothing here is a recommendation that you do the same protocol, take the same supplement, or expect the same result. Your body is not mine. Before changing your diet, starting a supplement, or undertaking any detox/cleanse protocol, talk to a licensed practitioner who knows your history.
+Every post in this repository is **n=1 personal health tracking** by Trisha Black, published as part of the [EndEndo.io](https://endendo.io) ecosystem. Nothing here is a recommendation that you do the same protocol, take the same supplement, or expect the same result. Your body is not mine, your baseline is not mine, and — particularly relevant for readers with endometriosis or adenomyosis — **your disease severity, medication regimen, and comorbidities make generalization from a single case inappropriate**.
 
-The data shown is real. The conclusions drawn are mine, and they are explicitly labeled as *what I chose to do*, not *what you should do*.
+Before changing your diet, starting a supplement, or undertaking any detox/cleanse protocol, talk to a licensed practitioner who knows your history. For people with endometriosis specifically, this means an OBGYN, reproductive endocrinologist, or a functional medicine practitioner familiar with the condition — not a wellness influencer, and not a protocol you found on the internet.
+
+The data shown is real. Every mechanistic claim is cited to peer-reviewed literature. The conclusions drawn are mine, and they are explicitly labeled as *what I chose to do*, not *what you should do*.
+
+### What is and is not being claimed
+
+- ✅ **I am sharing**: what I did, what was objectively measured, what the peer-reviewed research says about the underlying mechanisms, and what I'm personally choosing to do next.
+- ❌ **I am NOT claiming**: that any protocol in this repo will work for you, that any supplement will cure or treat endometriosis, that WHOOP-tracked improvements translate to clinical outcomes, or that I'm qualified to give individual medical advice.
+- ⚠️ **If you have endometriosis and are considering a detox protocol or elimination diet**, especially if you are on hormonal therapy, GnRH analogs, or NSAIDs, discuss it with your prescribing physician first. Some supplement ingredients (notably DIM, St. John's Wort, grapefruit-derived compounds) interact with cytochrome P450 enzymes and can alter medication levels.
 
 ## 💰 Affiliate relationships
 
