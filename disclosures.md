@@ -25,6 +25,7 @@ When a post contains an affiliate link, there is a clear disclosure at the top o
 | **Parsley Health** | Functional medicine membership | Referral or discount link | 🔄 Asking |
 | **Amazon Associates** | Books + hardware | 1–4% commission | 🔄 Pending |
 | **SweatHouse** | Infrared sauna membership | Local business — asking about referral program | 🔄 Asking |
+| **Evvy** | At-home vaginal microbiome test (mNGS + PCR) | Referral code / affiliate program — asking | 🔄 Asking |
 
 **I do not accept sponsorship for case-study content.** The protocol choices are driven by what I'm personally trying, not what a brand paid me to try. If that ever changes, you will know because there will be a "Sponsored" tag at the top of the post.
 

@@ -22,18 +22,25 @@ This is the opportunity this repository explores: using a consumer wearable (WHO
 
 ## What's here
 
-- **`case-studies/`** — n=1 protocols with full WHOOP data, cited research context, and honest caveats
+- **`case-studies/`** — n=1 personal case reports with full WHOOP data, cited research context, and honest caveats
+- **`studies/`** — multi-subject citizen-science studies with formal hypotheses, recruitment, and de-identified pooled data
 - **`scripts/`** — Node scripts to pull WHOOP data, compute phase comparisons, and export anonymized CSVs
 - **`templates/`** — reusable trackers (food reintroduction, trial protocol) that anyone can copy
 - **`disclosures.md`** — affiliate relationships, data sourcing, and medical disclaimers
 
-## Current case studies
+## Current case studies (n=1)
 
 | # | Protocol | Status | Key WHOOP signal |
 |---|----------|--------|------------------|
-| 001 | **Core Restore 14-day liver cleanse** | 📝 Draft (data in, narrative refining) | HRV +23%, recovery +12 pts, resting HR −4 bpm |
+| [001](case-studies/001-core-restore/) | **Core Restore 14-day liver cleanse** | 📝 Draft (data in, narrative refining) | HRV +23%, recovery +12 pts, resting HR −4 bpm |
 | 002 | **Nightshade reintroduction trial** | 🏃 In progress | HRV −23% by Day 4 (preliminary) |
 | 003 | **Infrared sauna: 30-day HRV tracking** | 🔮 Planned | TBD |
+
+## Current studies (n>1, citizen science)
+
+| # | Study | Status | Participants needed |
+|---|-------|--------|---------------------|
+| [001](studies/001-evvy-surgery-recovery/) | **Vaginal microbiome and endometriosis surgical recovery** (Evvy + WHOOP) | 📋 Protocol — recruiting | 10–30 participants with endo + planned laparoscopic surgery |
 
 ## The core principle
 
