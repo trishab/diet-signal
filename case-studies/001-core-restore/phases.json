@@ -1,0 +1,37 @@
+{
+  "protocol": "Core Restore 14-day liver cleanse (Designs for Health)",
+  "dates": {
+    "pulled_on": "2026-04-23",
+    "data_window_days": 45
+  },
+  "phases": [
+    {
+      "key": "pre",
+      "label": "Pre-detox baseline",
+      "start": "2026-03-09",
+      "end": "2026-04-04",
+      "notes": "27 days before Core Restore start. Standard eating, standard training, normal life."
+    },
+    {
+      "key": "detox",
+      "label": "Core Restore (14d)",
+      "start": "2026-04-05",
+      "end": "2026-04-18",
+      "notes": "14 consecutive days of the Core Restore protocol: AM + PM shake, elimination diet (no gluten, dairy, soy, corn, eggs, sugar, alcohol, caffeine), Designs for Health supplement stack."
+    },
+    {
+      "key": "clean",
+      "label": "Post-detox clean",
+      "start": "2026-04-19",
+      "end": "2026-04-19",
+      "notes": "Single rest day before starting food reintroduction."
+    },
+    {
+      "key": "night1",
+      "label": "Nightshade Trial 1",
+      "start": "2026-04-20",
+      "end": "2026-04-22",
+      "notes": "First food reintroduction trial (tomato / bell pepper / white potato / eggplant)."
+    }
+  ]
+}

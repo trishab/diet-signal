@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.*
+*.log
+
+# Raw WHOOP pulls — PII (user_id, email) must never be committed.
+# Only anonymized daily summaries (case-studies/*/data/daily-summary.csv) should be in git.
+/tmp/whoop-raw.json
+**/data/raw/
+**/whoop-raw.json
+**/whoop-daily.json
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,17 @@
+{
+  "name": "diet-signal",
+  "version": "0.1.0",
+  "description": "Objective physiological data + honest protocol reporting. WHOOP-backed n=1 case studies.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "pull": "node scripts/pull-whoop.mjs",
+    "export-csv": "node scripts/export-csv.mjs",
+    "analyze": "node scripts/analyze-phases.mjs"
+  },
+  "author": "Trisha Black",
+  "license": "MIT"
+}
