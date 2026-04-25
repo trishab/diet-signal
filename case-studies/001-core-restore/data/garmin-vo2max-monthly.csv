@@ -1,0 +1,32 @@
+month,vo2_max,phase_note
+2023-05,45.3,3-year peak window
+2023-06,46.0,3-year peak window
+2023-07,46.0,absolute peak
+2023-08,45.9,3-year peak window
+2023-09,46.0,3-year peak window
+2023-10,45.7,decline begins
+2023-11,45.4,decline
+2023-12,45.2,decline
+2024-01,43.8,decline
+2024-03,43.2,decline
+2024-04,43.1,decline
+2024-05,42.0,decline
+2024-06,41.9,decline
+2024-08,41.6,decline
+2024-09,41.6,decline
+2024-10,41.3,decline
+2024-11,41.3,decline
+2025-01,41.2,decline
+2025-02,41.0,decline
+2025-03,40.7,decline
+2025-04,40.2,decline
+2025-05,40.6,immediate pre-7d-cycle
+2025-06,39.7,nadir / 7-day Core Restore window
+2025-07,40.8,post-7d-cycle (+1.1)
+2025-08,42.2,post-7d-cycle (+1.4 from prior month; +2.5 from nadir)
+2025-09,41.4,post-7d-cycle plateau
+2025-10,41.2,post-7d-cycle plateau
+2025-11,41.5,post-7d-cycle plateau
+2026-02,41.5,pre-14d-cycle baseline
+2026-03,40.8,immediate pre-14d-cycle
+2026-04,40.7,during/just-after 14-day Core Restore (lagging metric — full effect not yet visible)

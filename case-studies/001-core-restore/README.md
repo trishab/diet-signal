@@ -12,16 +12,21 @@
 
 ## TL;DR
 
-Fourteen days of a structured liver cleanse (Designs for Health Core Restore) produced measurable, clinically meaningful improvements across every key autonomic nervous system and sleep metric captured by WHOOP:
+This is a within-subject case study of **two cycles of the same Designs for Health Core Restore protocol** at different durations: a **7-day cycle in June 2025** and a **14-day cycle in April 2026**.
 
+**The 14-day cycle (Apr 2026), captured by WHOOP:**
 - **HRV up 23%** (28.7 → 35.3 ms median)
 - **Recovery score up 12 points** (64 → 76)
 - **Resting HR down 4 bpm** (66 → 62)
 - **Sleep performance up 5 points** (86% → 91%)
 
-For someone with endometriosis — a disease driven by estrogen excess and systemic inflammation, both of which depend on liver clearance capacity — these aren't vanity metrics. HRV specifically is a validated non-invasive marker of systemic inflammation and vagal tone.[^hrv-thayer] A 23% improvement over 14 days is exactly the magnitude of change you'd expect if the protocol was successfully reducing inflammatory load.
+**The 7-day cycle (June 2025), captured by Garmin VO2 Max (no WHOOP at the time):**
+- **VO2 Max bottomed at the cycle window** (3-year nadir of 39.7) and **rebounded +2.5 points over the next 60 days** — the largest sustained rebound in my 3-year Garmin history
+- **Gains held for 9 months** in a band I hadn't reached since early 2024
 
-The numbers are real. What they *prove* is narrower than what they look like. This post covers what I did, what peer-reviewed research says about the mechanisms, what my data shows, and the confounders I cannot rule out.
+For someone with endometriosis — a disease driven by estrogen excess and systemic inflammation, both of which depend on liver clearance capacity — these aren't vanity metrics. HRV is a validated non-invasive marker of systemic inflammation and vagal tone.[^hrv-thayer] VO2 Max integrates cardiorespiratory fitness over weeks. A 23% HRV improvement plus a +2.5-point VO2 Max rebound that held for nearly a year is the kind of multi-axis signal you'd expect if a protocol was reducing inflammatory load and improving recovery capacity.
+
+The numbers are real. What they *prove* is narrower than what they look like. This post covers what I did, what peer-reviewed research says about the mechanisms, what my data shows across both cycles, and the confounders I cannot rule out.
 
 ---
 
@@ -198,11 +203,37 @@ The merged CSV preserves both sources with `whoop_` and `garmin_` prefixes — s
 
 ### What three patterns might emerge
 
-When the Garmin data is in, the analysis will tell one of three stories:
+When the full Garmin data is in, the analysis will tell one of three stories:
 
 1. **Linear dose-response.** The 7-day cycle moved resting HR / body battery / sleep duration by *some* amount, and the 14-day cycle roughly doubled the shift. → Suggests duration matters, the protocol is on a productive curve, and longer cycles (or annual cadence) are likely worth the cost.
 2. **Plateau effect.** The 7-day cycle moved metrics nearly as much as the 14-day cycle. → Suggests the second week mostly maintains rather than extends gains. **This would be a clinically valuable finding** because most functional-medicine cleanse protocols default to 14 days; if 7 is enough for someone like me, that halves the cost and improves accessibility.
 3. **No coherent signal in 2025.** The 7-day cycle didn't move Garmin metrics meaningfully. → Suggests either (a) duration matters in a non-linear way and 7 days is below threshold, (b) life confounders in summer 2025 swamped the effect, or (c) my Garmin metrics aren't sensitive enough to detect a real change of that magnitude.
+
+### Early signal — Garmin VO2 Max, May 2023 → April 2026
+
+I pulled my monthly VO2 Max series from Garmin Connect's Reports export (3 years, 31 data points) ahead of the full daily-data export. **The signal is strong enough to flag here even before the full daily data is in.** Raw values in [`data/garmin-vo2max-monthly.csv`](data/garmin-vo2max-monthly.csv).
+
+| Window | VO2 Max | Notes |
+|---|---|---|
+| May–Sep 2023 | 45.3–46.0 | 3-year peak — the band I want to return to |
+| Oct 2023 → May 2025 | 45.7 → 40.6 | 19-month steady decline; ~12% drop |
+| **June 2025** | **39.7** | **3-year nadir. The 7-day Core Restore happened in this window.** |
+| **July 2025** | **40.8** | First post-cycle reading, +1.1 |
+| **August 2025** | **42.2** | +1.4 more (+2.5 cumulative from nadir; biggest 60-day rebound in the dataset) |
+| Sep 2025 → Mar 2026 | 41.0–41.5 | Gains held for 9 months in a band I hadn't touched since early-to-mid 2024 |
+| April 2026 | 40.7 | During/just after the 14-day cycle. **VO2 Max is a lagging metric** — full effect won't update until May–July 2026 readings. |
+
+**What this preliminarily suggests:** the 7-day cycle in June 2025 caught a 2-year decline at its nadir and was followed by the largest sustained VO2 Max rebound of the entire 3-year window — and most of those gains held through to the next cycle. That's a striking pattern, but it requires the named caveats below.
+
+**Confounders I cannot rule out from monthly VO2 Max data alone:**
+- **Outdoor training volume.** Garmin computes VO2 Max from running/walking pace + HR. Higher summer outdoor activity volume alone could produce a meaningful portion of the rebound.
+- **Body weight changes.** VO2 Max is normalized to weight (mL O2/kg/min). Weight loss during or after the cleanse would mathematically increase VO2 Max even without a true cardiorespiratory change.
+- **Reversion to mean.** The June 2025 nadir was the bottom of a noisy decline; some bounce-back was statistically likely regardless.
+- **Metric sensitivity.** Garmin's VO2 Max algorithm produces aggregate monthly values that smooth over a lot of underlying variation.
+
+Those caveats matter. They don't erase a +2.5 point sustained 60-day rebound that hasn't occurred at any other point in the 3-year series — but they constrain how strong a claim is appropriate.
+
+**What this means for the dose-response question:** if the daily Garmin data shows a similar resting-HR / body-battery / sleep-duration pattern around the June 2025 cycle, the dose-response question shifts from *"did 7 days do anything"* to *"did 7 days do most of what 14 days will do"* — which is the **plateau scenario** above, the most clinically useful finding.
 
 ### What durability would also look like
 
