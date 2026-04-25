@@ -171,6 +171,31 @@ See [`data/daily-summary.csv`](data/daily-summary.csv) for the full daily series
 
 ---
 
+## Longitudinal extension — multi-year view (Garmin + WHOOP)
+
+This Apr 2026 Core Restore is **not my first detox cycle**. I also did a similar protocol in **June 2025**, before I owned a WHOOP. To put the Apr 2026 numbers into multi-year context, I'm pulling my Garmin Connect history (resting HR, body battery, sleep duration, stress score) and merging it with the WHOOP data into a single longitudinal CSV.
+
+The pipeline is reproducible:
+
+```bash
+# 1. Request Garmin export from Garmin Connect web → Account → Export Your Data
+# 2. Parse the export to a daily CSV
+node scripts/parse-garmin-export.mjs --export-dir <export-dir> --out /tmp/garmin-daily.csv
+# 3. Merge with the WHOOP daily summary
+node scripts/merge-longitudinal.mjs \
+  --whoop case-studies/001-core-restore/data/daily-summary.csv \
+  --garmin /tmp/garmin-daily.csv \
+  --out case-studies/001-core-restore/data/longitudinal-summary.csv
+```
+
+The merged CSV preserves both sources with `whoop_` and `garmin_` prefixes — so when both wearables report the same metric (e.g., resting HR), I can cross-validate, and when only one source covers a date range, the other's columns are simply blank for those rows.
+
+**Why this matters for the case study:** if the Apr 2026 HRV / resting-HR improvements are real protocol effects (not random variation in my baseline), I should see a similar pattern around the June 2025 detox in the Garmin data — at least in the metrics Garmin captures (resting HR, body battery, sleep duration). If that pattern is there, the protocol effect is more likely real. If it's not, that's a finding worth writing up too.
+
+The phase config at [`phases.json`](phases.json) now includes placeholder rows for the 2025 baseline, the June 2025 detox window, and the between-detoxes period. Those date ranges are flagged for confirmation before the phase comparison is regenerated.
+
+---
+
 ## What I'm choosing to do next
 
 *[First draft — the spine is right; refine to match what you've actually decided with your practitioner.]*

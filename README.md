@@ -54,6 +54,7 @@ Every claim in every case study is tied to (a) the raw anonymized data in `data/
 # Install (Node 20+)
 npm install
 
+# --- WHOOP ---
 # Pull your last 45 days of WHOOP data (requires whoop-ai-mcp token at ~/.whoop-mcp/tokens.json)
 node scripts/pull-whoop.mjs --days 45 --out /tmp/whoop-raw.json
 
@@ -62,7 +63,27 @@ node scripts/export-csv.mjs --in /tmp/whoop-raw.json --out case-studies/001-core
 
 # Run a phase comparison against a config
 node scripts/analyze-phases.mjs --data /tmp/whoop-raw.json --config case-studies/001-core-restore/phases.json
+
+# --- Garmin (longitudinal — extends history beyond WHOOP ownership window) ---
+# 1. In Garmin Connect web → Account → Manage Your Data → "Export Your Data"
+#    Garmin emails a download link within ~24h. Unzip the result.
+# 2. (First run only) Inspect the export structure to confirm parser will work:
+node scripts/parse-garmin-export.mjs --export-dir ~/Downloads/garmin-export --out /tmp/garmin-daily.csv --inspect
+# 3. Parse to a daily CSV:
+node scripts/parse-garmin-export.mjs --export-dir ~/Downloads/garmin-export --out /tmp/garmin-daily.csv
+
+# --- Merge WHOOP + Garmin into one longitudinal CSV ---
+node scripts/merge-longitudinal.mjs \
+  --whoop case-studies/001-core-restore/data/daily-summary.csv \
+  --garmin /tmp/garmin-daily.csv \
+  --out case-studies/001-core-restore/data/longitudinal-summary.csv
 ```
+
+### Why merge WHOOP and Garmin?
+
+WHOOP gives you the strongest single-platform signal (continuous HRV at high temporal resolution), but most readers haven't owned a WHOOP since the dawn of time. Garmin coverage often goes back further — 2–5+ years for many users. Merging the two lets a case study span **multiple intervention episodes** (e.g., a 2025 detox AND a 2026 detox) instead of being limited to whatever year the wearable changed.
+
+The two sources report slightly different metrics: WHOOP gives recovery score and rmssd-style HRV; Garmin gives resting HR, body battery, stress score, and (newer devices) a different HRV calculation. The merged CSV preserves both with `whoop_` and `garmin_` prefixes so downstream analysis can cross-validate or pick the cleaner signal per metric.
 
 ## License
 

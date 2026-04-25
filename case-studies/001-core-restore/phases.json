@@ -2,29 +2,51 @@
   "protocol": "Core Restore 14-day liver cleanse (Designs for Health)",
   "dates": {
     "pulled_on": "2026-04-23",
-    "data_window_days": 45
+    "data_window_days": 45,
+    "longitudinal_extension_pending": "Garmin export will extend window back to first wearable-tracked detox cycle"
   },
   "phases": [
     {
+      "key": "longitudinal-baseline-2025",
+      "label": "Long-baseline 2025",
+      "start": "2025-01-01",
+      "end": "2025-05-31",
+      "notes": "Pre-2025-detox baseline. Populated from Garmin data (no WHOOP yet). Compare resting HR, body battery, sleep duration to subsequent phases."
+    },
+    {
+      "key": "detox-2025-06",
+      "label": "First detox cycle (Jun 2025)",
+      "start": "2025-06-01",
+      "end": "2025-06-30",
+      "notes": "PLACEHOLDER — exact dates to be confirmed. ⚠️ Update start/end after confirming protocol calendar. If this was Core Restore proper, mechanism overlap with the Apr 2026 phase is direct; if a different cleanse, label accordingly. Garmin metrics only (no WHOOP). Compare resting HR, body battery, sleep performance to longitudinal baseline."
+    },
+    {
+      "key": "between-detoxes-2025-2026",
+      "label": "Between-detoxes window",
+      "start": "2025-07-01",
+      "end": "2026-04-04",
+      "notes": "Long observation window between cycles. Useful for detecting whether detox effects persist (resting HR, sleep) or revert to baseline. Garmin throughout; WHOOP joins partway through."
+    },
+    {
       "key": "pre",
-      "label": "Pre-detox baseline",
+      "label": "Pre-detox baseline (Apr 2026)",
       "start": "2026-03-09",
       "end": "2026-04-04",
-      "notes": "27 days before Core Restore start. Standard eating, standard training, normal life."
+      "notes": "Immediate 27-day pre-detox baseline for the Apr 2026 Core Restore. WHOOP data only (clean WHOOP-only window for this analysis)."
     },
     {
       "key": "detox",
-      "label": "Core Restore (14d)",
+      "label": "Core Restore (14d, Apr 2026)",
       "start": "2026-04-05",
       "end": "2026-04-18",
-      "notes": "14 consecutive days of the Core Restore protocol: AM + PM shake, elimination diet (no gluten, dairy, soy, corn, eggs, sugar, alcohol, caffeine), Designs for Health supplement stack."
+      "notes": "14 consecutive days of Core Restore protocol: AM + PM shake, elimination diet (no gluten, dairy, soy, corn, eggs, sugar, alcohol, caffeine), Designs for Health supplement stack."
     },
     {
       "key": "clean",
       "label": "Post-detox clean",
       "start": "2026-04-19",
       "end": "2026-04-19",
-      "notes": "Single rest day before starting food reintroduction."
+      "notes": "Single rest day before food reintroduction."
     },
     {
       "key": "night1",
