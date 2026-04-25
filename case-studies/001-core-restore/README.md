@@ -171,11 +171,17 @@ See [`data/daily-summary.csv`](data/daily-summary.csv) for the full daily series
 
 ---
 
-## Longitudinal extension — multi-year view (Garmin + WHOOP)
+## Longitudinal extension — a within-subject dose-response observation
 
-This Apr 2026 Core Restore is **not my first detox cycle**. I also did a similar protocol in **June 2025**, before I owned a WHOOP. To put the Apr 2026 numbers into multi-year context, I'm pulling my Garmin Connect history (resting HR, body battery, sleep duration, stress score) and merging it with the WHOOP data into a single longitudinal CSV.
+This Apr 2026 Core Restore is **my second cycle of the same protocol**. In **June 2025** I ran Core Restore for **7 days** — half the standard duration. The Apr 2026 cycle was the full 14 days. Same supplement stack, same elimination diet, same practitioner-supervised protocol — just twice the duration.
 
-The pipeline is reproducible:
+That makes this an unintentional but legitimate **within-subject dose-response observation**:
+
+> *Did doubling the protocol duration produce a roughly proportional shift in autonomic markers, a diminishing-returns plateau, or a substantially different effect altogether?*
+
+The 2025 cycle predates my WHOOP ownership, so HRV-quality data isn't available for that window. But Garmin tracks resting heart rate, body battery, sleep duration, and stress score continuously, and those are the metrics that overlap most cleanly with WHOOP's. Merging the two sources gives a multi-year view of the same body across two doses of the same intervention.
+
+### Pipeline (reproducible)
 
 ```bash
 # 1. Request Garmin export from Garmin Connect web → Account → Export Your Data
@@ -188,11 +194,21 @@ node scripts/merge-longitudinal.mjs \
   --out case-studies/001-core-restore/data/longitudinal-summary.csv
 ```
 
-The merged CSV preserves both sources with `whoop_` and `garmin_` prefixes — so when both wearables report the same metric (e.g., resting HR), I can cross-validate, and when only one source covers a date range, the other's columns are simply blank for those rows.
+The merged CSV preserves both sources with `whoop_` and `garmin_` prefixes — so when both wearables report the same metric (resting HR being the cleanest cross-source signal), the data can cross-validate, and when only one source covers a date range, the other's columns are simply blank.
 
-**Why this matters for the case study:** if the Apr 2026 HRV / resting-HR improvements are real protocol effects (not random variation in my baseline), I should see a similar pattern around the June 2025 detox in the Garmin data — at least in the metrics Garmin captures (resting HR, body battery, sleep duration). If that pattern is there, the protocol effect is more likely real. If it's not, that's a finding worth writing up too.
+### What three patterns might emerge
 
-The phase config at [`phases.json`](phases.json) now includes placeholder rows for the 2025 baseline, the June 2025 detox window, and the between-detoxes period. Those date ranges are flagged for confirmation before the phase comparison is regenerated.
+When the Garmin data is in, the analysis will tell one of three stories:
+
+1. **Linear dose-response.** The 7-day cycle moved resting HR / body battery / sleep duration by *some* amount, and the 14-day cycle roughly doubled the shift. → Suggests duration matters, the protocol is on a productive curve, and longer cycles (or annual cadence) are likely worth the cost.
+2. **Plateau effect.** The 7-day cycle moved metrics nearly as much as the 14-day cycle. → Suggests the second week mostly maintains rather than extends gains. **This would be a clinically valuable finding** because most functional-medicine cleanse protocols default to 14 days; if 7 is enough for someone like me, that halves the cost and improves accessibility.
+3. **No coherent signal in 2025.** The 7-day cycle didn't move Garmin metrics meaningfully. → Suggests either (a) duration matters in a non-linear way and 7 days is below threshold, (b) life confounders in summer 2025 swamped the effect, or (c) my Garmin metrics aren't sensitive enough to detect a real change of that magnitude.
+
+### What durability would also look like
+
+The 10 months *between* the two cycles is its own observation window. If June 2025's resting HR shift persisted into the 2026 baseline (i.e., my "pre-detox baseline" in 2026 is meaningfully lower than my "pre-2025-detox baseline"), that's evidence the 7-day cycle produced **durable** effects on top of any acute shift. If the 2026 baseline drifted back to the 2025 pre-detox level, the effect was **transient**.
+
+The phase config at [`phases.json`](phases.json) now includes the 2025 long-baseline, the 7-day Core Restore window, the 10-month between-detoxes period, and the 14-day Apr 2026 cycle as separate phases for the comparison. Date ranges for the 2025 cycle are flagged ⚠️ pending confirmation of the exact start date.
 
 ---
 

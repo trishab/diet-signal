@@ -14,18 +14,18 @@
       "notes": "Pre-2025-detox baseline. Populated from Garmin data (no WHOOP yet). Compare resting HR, body battery, sleep duration to subsequent phases."
     },
     {
-      "key": "detox-2025-06",
-      "label": "First detox cycle (Jun 2025)",
+      "key": "detox-2025-jun-7d",
+      "label": "Core Restore (7d, Jun 2025)",
       "start": "2025-06-01",
-      "end": "2025-06-30",
-      "notes": "PLACEHOLDER — exact dates to be confirmed. ⚠️ Update start/end after confirming protocol calendar. If this was Core Restore proper, mechanism overlap with the Apr 2026 phase is direct; if a different cleanse, label accordingly. Garmin metrics only (no WHOOP). Compare resting HR, body battery, sleep performance to longitudinal baseline."
+      "end": "2025-06-07",
+      "notes": "⚠️ PLACEHOLDER DATES — Trisha to confirm exact start. SAME Core Restore protocol as Apr 2026, but only 7 days duration (half the standard cycle). This makes the 2025 vs 2026 comparison a within-subject dose-response observation: did doubling the duration produce a proportional effect, a plateau, or a different effect altogether? Garmin metrics only (no WHOOP at this time)."
     },
     {
       "key": "between-detoxes-2025-2026",
       "label": "Between-detoxes window",
-      "start": "2025-07-01",
+      "start": "2025-06-08",
       "end": "2026-04-04",
-      "notes": "Long observation window between cycles. Useful for detecting whether detox effects persist (resting HR, sleep) or revert to baseline. Garmin throughout; WHOOP joins partway through."
+      "notes": "10-month observation window between the 7-day and 14-day cycles. Useful for detecting whether the 7-day cycle produced durable effects on resting HR / body battery / sleep, or whether the metrics reverted to long-baseline. The longer this window persists at improved values, the more durable the protocol effect. Garmin throughout; WHOOP joins partway through (purchase date TBD by Trisha — the date the WHOOP CSV starts is the seam)."
     },
     {
       "key": "pre",
@@ -39,7 +39,7 @@
       "label": "Core Restore (14d, Apr 2026)",
       "start": "2026-04-05",
       "end": "2026-04-18",
-      "notes": "14 consecutive days of Core Restore protocol: AM + PM shake, elimination diet (no gluten, dairy, soy, corn, eggs, sugar, alcohol, caffeine), Designs for Health supplement stack."
+      "notes": "14 consecutive days of Core Restore protocol: AM + PM shake, elimination diet (no gluten, dairy, soy, corn, eggs, sugar, alcohol, caffeine), Designs for Health supplement stack. SAME protocol as Jun 2025 7-day cycle but doubled duration. Cross-phase comparison hypothesis: does duration scale linearly with HRV / RHR shift, or does the second week deliver diminishing returns?"
     },
     {
       "key": "clean",
